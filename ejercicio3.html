@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TP 3: Cuentas bancarias</title>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body class="container">
+        <h4>TP3 - Ejercitación de Objetos y DOM en JavaScript - Cuentas bancarias</h4>
+        <h5>5to Informática 2021 - Colegio Pio IX. Profesores: Nicolás Facón y Martín Rivas</h5>
+        <br>
+        <div>
+            <div class="col-auto shadow p-3 mb-5 bg-white rounded">
+                <h3>Máximos y mínimos</h3>
+                <div class="form-group">                
+                    <button class="form-check-control btn btn-info" onclick="obtenerMayorDolar()">Obtener mayor</button>
+                    <button class="form-check-control btn btn-info">Obtener mayor dólares</button>
+                    <button class="form-check-control btn btn-info">Obtener menor</button>
+                    <button class="form-check-control btn btn-info">Obtener menor dólares</button>
+                </div>
+            </div>
+            <!--Div para cargar la información de una cuenta-->
+            <div class="col-auto shadow p-3 mb-5 bg-white rounded">
+            </div>
+            <div class="col-auto shadow p-3 mb-5 bg-white rounded">
+                <h3>Listados</h3>
+                <div class="form-group">
+                    <button class="form-check-control btn btn-info" onclick="listarClientes()">Listar clientes</button>
+                    <button class="form-check-control btn btn-success">Listar clientes CSV</button>
+                    <button class="form-check-control btn btn-danger">Listar morosos</button>
+                    <br>
+                    <label for="searchByContent">Buscar clientes por apellido o DNI</label>
+                    <input class="form-control" type="text">
+                </div>
+                <table class="table">
+                </table>
+            </div>
+            <div class="col-auto shadow p-3 mb-5 bg-white rounded">
+                <h3>Realizar transferencia</h3>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="selectClienteOrigen">Cliente que transfiere el dinero </label>
+                        <select name="" id="">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="selectClienteDestino">Cliente que recibe el dinero </label>
+                        <select name="" id="">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="montoTransferencia">Monto a transferir ($) </label>
+                        <input type="text">
+                    </div>
+                    <button class="form-check-control btn btn-success">Transferir</button>
+                </div>
+            </div>
+            <div class="col-auto shadow p-3 mb-5 bg-white rounded">
+                <h3>Añadir nuevo consumo de tarjeta</h3>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="selectClienteNuevoConsumo">Cliente que realizó el consumo </label>
+                        <select name="">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nuevoLocal">Nombre del local </label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="nuevoConsumo">Consumo realizado ($) </label>
+                        <input type="text">
+                    </div>
+                    <button class="form-check-control btn btn-success">Añadir consumo</button>
+                </div>
+            </div>
+            <div class="col-auto shadow p-3 mb-5 bg-white rounded">
+                <h3>Pagar tarjeta</h3>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="selectClientePagoTarjeta">Cliente que va a pagar la tarjeta </label>
+                        <select name="" id="">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="montoPagarTarjeta">Monto a pagar ($) </label>
+                        <input type="text">
+                    </div>
+                    <button class="form-check-control btn btn-success">Pagar</button>
+                </div>
+            </div>
+            <button class="form-check-control btn btn-info">Agregar un cliente nuevo</button>
+        </div>
+
+        <script src="archivoParaLosAlumnos.js"></script>
+    </body>
+</html>
